@@ -3,11 +3,11 @@ import {Subject} from "@reactivex/rxjs";
 export class SubjectManager {
   subject$ = new Subject();
 
-  get getSubject() {
+  getSubject() {
     return this.subject$.asObservable();
   }
 
-  set setSubject(value) {
+  setSubject(value) {
     this.subject$.next(value);
   }
 }
